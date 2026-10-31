@@ -2,7 +2,7 @@
 
 > 跨平台 B 站在线视频下载器 — Electron + React + aria2c + ffmpeg
 >
-> **当前版本**：V2.04（2.0.4）　·　**开发者**：Skylong　·　**平台**：Windows 10/11（x64）、macOS 12+（Apple Silicon）　·　**版权**：© 2026 Skylong
+> **当前版本**：V2.05（2.0.5）　·　**开发者**：Skylong　·　**平台**：Windows 10/11（x64）、macOS 12+（Apple Silicon）　·　**版权**：© 2026 Skylong
 
 Bili Crab 是一款专注于 **B 站在线视频下载** 的桌面工具。它把你**有权观看**的视频保存为本地 MP4 或 MP3，支持扫码登录、清晰度选择、单视频/合集两种下载模式、批量下载（BV / av / ep / ss / 链接）、封面字幕弹幕、主题切换、下载历史和自动更新。
 
@@ -126,9 +126,9 @@ V2.03 起，下载入口明确拆分为两个模式：
 
 ## 截图
 
-![Bili Crab V2.04 封面](https://github.com/Skylong-cn/bili-crab/releases/download/v2.0.4/BiliCrab-V2.04-Intro-Cover.png)
+![Bili Crab V2.05 封面](https://github.com/Skylong-cn/bili-crab/releases/download/v2.0.5/BiliCrab-V2.05-Intro-Cover.png)
 
-> 完整图文说明（中英双语、FAQ、更新日志）见 [BiliCrab-V2.04-Manual.html](https://github.com/Skylong-cn/bili-crab/releases/download/v2.0.4/BiliCrab-V2.04-Manual.html)；4K120 介绍视频见 [Release](https://github.com/Skylong-cn/bili-crab/releases/tag/v2.0.4)。
+> 完整图文说明（中英双语、FAQ、更新日志）见 [BiliCrab-V2.05-Manual.html](https://github.com/Skylong-cn/bili-crab/releases/download/v2.0.5/BiliCrab-V2.05-Manual.html)；4K120 介绍视频见 [Release](https://github.com/Skylong-cn/bili-crab/releases/tag/v2.0.5)。
 
 ---
 
@@ -136,14 +136,14 @@ V2.03 起，下载入口明确拆分为两个模式：
 
 ### 版本与产物
 
-当前版本 **V2.04 / 2.0.4**，发布资产：
+当前版本 **V2.05 / 2.0.5**，发布资产：
 
 | 平台 | 文件 | 说明 |
 |---|---|---|
-| Windows 安装版 | `BiliCrab-Setup-2.0.4.exe` | NSIS 安装；默认当前用户安装，创建桌面/开始菜单快捷方式 |
-| Windows 绿色版 | `BiliCrab-Portable-2.0.4-x64.exe` | 单文件免安装；数据在 exe 同目录 `Bili Crab Data` |
-| macOS 安装镜像 | `BiliCrab-2.0.4-arm64.dmg` | Apple Silicon；拖入「应用程序」 |
-| macOS 更新包 | `BiliCrab-2.0.4-arm64.zip` | 自动更新使用；手动安装用户一般无需下载 |
+| Windows 安装版 | `BiliCrab-Setup-2.0.5.exe` | NSIS 安装；默认当前用户安装，创建桌面/开始菜单快捷方式 |
+| Windows 绿色版 | `BiliCrab-Portable-2.0.5-x64.exe` | 单文件免安装；数据在 exe 同目录 `Bili Crab Data` |
+| macOS 安装镜像 | `BiliCrab-2.0.5-arm64.dmg` | Apple Silicon；拖入「应用程序」 |
+| macOS 更新包 | `BiliCrab-2.0.5-arm64.zip` | 自动更新使用；手动安装用户一般无需下载 |
 | 校验文件 | `SHA256SUMS.txt` | 更新包校验用，随 Release 提供 |
 
 > 源码归档不公开提供；需要审计或定制请联系作者。
@@ -157,7 +157,7 @@ V2.03 起，下载入口明确拆分为两个模式：
 
 ### macOS
 
-1. 下载 `BiliCrab-2.0.4-arm64.dmg`；
+1. 下载 `BiliCrab-2.0.5-arm64.dmg`；
 2. 打开 dmg，把 **Bili Crab** 拖入「应用程序」；
 3. 首次打开：右键 → **打开**；若仍被拦截，到 **系统设置 → 隐私与安全性 → 仍要打开**；
 4. 不要直接在挂载的 dmg 里运行。当前 dmg 未做 Apple 公证，首次提示属于预期。
@@ -165,7 +165,7 @@ V2.03 起，下载入口明确拆分为两个模式：
 ### 升级已有版本
 
 - V2.01 及以上：启动后会静默检查更新，按提示选择「立即更新」或「下次启动软件时更新」；选择后者会在下次启动**自动安装并重启**，无需再次确认。
-- V1.5 / V2.00：没有自动更新，请手动下载 V2.04 覆盖安装/替换 exe；**先备份** `settings.json`、`storage.json`。
+- V1.5 / V2.00：没有自动更新，请手动下载 V2.05 覆盖安装/替换 exe；**先备份** `settings.json`、`storage.json`。
 - 设置、历史、登录态位于数据目录，升级通常无需重新扫码；仍建议先备份。
 
 ---
@@ -347,7 +347,7 @@ https://space.bilibili.com/<mid>/lists/<seasonId>?type=season
 - 绿色版是真便携：把 exe 与 `Bili Crab Data` 一起拷走，登录态、设置与历史保留。
 - 安装版卸载不会自动删除 `%APPDATA%\Bili Crab`，需要手动清理。
 - 登录 Cookie 属敏感信息，不要分享 `settings.json`。
-- 旧版 v1.4 的 `data/`、`tools/BBDown.data` 不会被 V2.04 读取。
+- 旧版 v1.4 的 `data/`、`tools/BBDown.data` 不会被 V2.05 读取。
 
 ---
 
@@ -366,8 +366,8 @@ https://space.bilibili.com/<mid>/lists/<seasonId>?type=season
 
 1. 先备份 `settings.json` 与 `storage.json`（路径见上表）。
 2. V2.01 及以上：启动客户端，按更新提示操作；选择「下次启动」会在下次启动自动安装并重启。
-3. V1.5 / V2.00：手动下载 V2.04 安装包；绿色版替换 exe 并保留 `Bili Crab Data`。
-4. v1.4 的客户端缓存导出数据不兼容，也不需要在 V2.04 中沿用。
+3. V1.5 / V2.00：手动下载 V2.05 安装包；绿色版替换 exe 并保留 `Bili Crab Data`。
+4. v1.4 的客户端缓存导出数据不兼容，也不需要在 V2.05 中沿用。
 
 ---
 
@@ -395,7 +395,7 @@ npm run package:mac                  # macOS dmg + zip（arm64）
 ## 发布说明
 
 - 发布仓库/更新源：`Skylong-cn/bili-crab`（Public）。
-- Release 只上传：`BiliCrab-Setup-2.0.4.exe`、`BiliCrab-Portable-2.0.4-x64.exe`、`BiliCrab-2.0.4-arm64.dmg`、`BiliCrab-2.0.4-arm64.zip`、`SHA256SUMS.txt`，以及使用说明书/演示视频；**不上传源码**。
+- Release 只上传：`BiliCrab-Setup-2.0.5.exe`、`BiliCrab-Portable-2.0.5-x64.exe`、`BiliCrab-2.0.5-arm64.dmg`、`BiliCrab-2.0.5-arm64.zip`、`SHA256SUMS.txt`，以及使用说明书/演示视频；**不上传源码**。
 - 发布前客户端检测不到新版本；Release 发布后，客户端下次启动自动读取 latest Release。
 - 详细步骤见 [docs/GITHUB_RELEASE.md](docs/GITHUB_RELEASE.md)。
 
@@ -511,6 +511,12 @@ npm run package:mac                  # macOS dmg + zip（arm64）
 ---
 
 ## 更新日志
+
+### v2.05（2026-10-31）
+
+- **macOS 28 兼容修复**：macOS arm64 包内的 `aria2c` 由 x86_64/Rosetta 改为原生 arm64 1.37.0，随包附带 OpenSSL 4 运行库与 legacy provider。
+- 旧版 macOS 包因内置 x86_64 `aria2c`，升级到 macOS 28 后会提示组件无法打开；V2.05 已消除该提示。
+- 批量 `ep/ss`、单视频/合集拆分、4K120 介绍视频保持不变。
 
 ### V2.04（2026-10-31）
 
